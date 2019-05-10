@@ -1,10 +1,10 @@
 namespace: openpitrix-system
-version: latest
+version: v0.4.0
 
-image: openpitrix/openpitrix:latest
-flyway_image: openpitrix/openpitrix:flyway
+image: openpitrix/openpitrix:v0.4.1
+flyway_image: openpitrix/openpitrix:flyway-v0.4.1
 
-image_pull_policy: Always
+image_pull_policy: IfNotPresent
 openpitrix_log_level: info
 grpc_show_error_cause: true
 
@@ -33,7 +33,7 @@ iam_secret_key: lrsX5vk03JLNRBI9TnwOPZSNrxFIqvrxajs95MjZSmdsYCEYCPjSI4cLPjG2yT2j
 iam_client_id: JYGJTveVcmuAvV95iNUnKHgQ
 iam_client_secret: E3SVNXrZOWvsQ2eyrvs9u4nV
 iam_init_account_email: admin@op.com
-iam_init_account_password: HYcida4bFrMP
+iam_init_account_password: passw0rd
 
 global_config:
   pilot_ip: 127.0.0.1
@@ -45,8 +45,8 @@ global_config:
   ignore_keys: '{"runtime": true, "cluster": {"registry_mirror": true}}'
 
 dashboard:
-  version: 
-  image: openpitrix/dashboard:latest
+  version: v0.4.2
+  image: openpitrix/dashboard:v0.4.2
 
 etcd:
   host: openpitrix-etcd
@@ -60,36 +60,36 @@ mysql:
   backend_port: 3306
 
 notification:
-  version: 
-  image: openpitrix/notification:latest
-  flyway_image: openpitrix/notification:flyway
+  version: v0.1.0
+  image: openpitrix/notification:v0.1.0
+  flyway_image: openpitrix/notification:flyway-v0.1.0
 
 im:
-  version: 
-  image: kubespheredev/im:latest
-  flyway_image: kubespheredev/im:flyway
+  version: v0.1.0
+  image: kubespheredev/im:v0.1.0
+  flyway_image: kubespheredev/im:flyway-v0.1.0
   db_log_mode_enable: true
 
 am:
-  version: 
-  image: openpitrix/iam:latest
-  flyway_image: openpitrix/iam:flyway
+  version: v0.1.0
+  image: openpitrix/iam:v0.1.0
+  flyway_image: openpitrix/iam:flyway-v0.1.0
   db_log_mode_enable: true
 
 #runtime_provider
 rp:
-  qingcloud_version: 
-  qingcloud_image: openpitrix/runtime-provider-qingcloud:latest
-  aws_version: 
-  aws_image: openpitrix/runtime-provider-aws:latest
-  aliyun_version: 
-  aliyun_image: openpitrix/runtime-provider-aliyun:latest
-  k8s_version: 
-  k8s_image: openpitrix/runtime-provider-kubernetes:latest
+  qingcloud_version: v0.1.0
+  qingcloud_image: openpitrix/runtime-provider-qingcloud:v0.1.0
+  aws_version: v0.1.0
+  aws_image: openpitrix/runtime-provider-aws:v0.1.0
+  aliyun_version: v0.1.0
+  aliyun_image: openpitrix/runtime-provider-aliyun:v0.1.0
+  k8s_version: v0.1.0
+  k8s_image: openpitrix/runtime-provider-kubernetes:v0.1.0
 
 watcher:
-  version: 
-  image: 
+  version: v0.1.0
+  image: openpitrix/watcher:v0.1.0
 
 
 openpitrix_ca_crt: |-
